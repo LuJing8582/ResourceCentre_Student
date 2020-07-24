@@ -215,9 +215,9 @@ public class ResourceCentre {
 
 		// write your code here
 		
-		return true;
 
 		//YUPING AND YUTING
+		
 		boolean isLoaned = false;
 		for (int i = 0; i < chromebookList.size(); i++) {
 			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
@@ -255,6 +255,7 @@ public class ResourceCentre {
 		}
 		return isReturned;
 		
+		
 	}
 	public static void returnCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.viewAllCamcorder(camcorderList);
@@ -278,19 +279,7 @@ public class ResourceCentre {
 		// write your code here
 		// write your code here
 	}
-<<<<<<< HEAD
-    
-	public String concatenate_LuJing(String one, String two){
-        return "hello";
-}
 
-=======
-
-	public String concatenate(String one, String two){
-            return "hello";
->>>>>>> branch 'master' of https://github.com/LuJing8582/ResourceCentre_Student.git
-}
- 
 		
 	
 
