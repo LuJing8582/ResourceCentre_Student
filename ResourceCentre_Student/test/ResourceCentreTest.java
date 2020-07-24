@@ -99,6 +99,7 @@ public class ResourceCentreTest {
 	public void doLoanChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		if()
 	}
 	
 	@Test

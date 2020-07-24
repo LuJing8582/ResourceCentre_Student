@@ -24,7 +24,7 @@ public class Chromebook extends Item{
 	 */
 	public boolean getIsAvailable() {
 		// TODO Auto-generated method stub
-		return isAvailable ;
+		return isAvailable ; 
 	}
 }
 
