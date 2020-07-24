@@ -90,8 +90,9 @@ public class ResourceCentreTest {
 		// write your code here
 		boolean isLoaned = false;
 		for(int i=0; i<camcorderList.size();i++) {
-			if(tag.equals(camcorderList.get(i).getAssetTag() )&& camcorderList.get(i).getIsAvailable()==true){
-				camcorderList.get(i).getIsAvailable(false);
+			if(tag.equals(camcorderList.get(i).getAssetTag() )&& camcorderList.get(i).getIsAvailable()==true)
+			{
+				camcorderList.get(i).setIsAvailable(false);
 				camcorderList.get(i).setDueDate(dueDate);
 				isLoaned=true;
 			}
