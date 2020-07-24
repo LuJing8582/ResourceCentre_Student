@@ -257,9 +257,24 @@ public class ResourceCentre {
 		// write your code here
 		// write your code here
 	}
+<<<<<<< HEAD
     
 	public String concatenate_LuJing(String one, String two){
         return "hello";
 }
 
+=======
+
+	public String concatenate(String one, String two){
+            return "hello";
+>>>>>>> branch 'master' of https://github.com/LuJing8582/ResourceCentre_Student.git
 }
+ 
+		
+	
+
+
+}
+
+
+
