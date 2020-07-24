@@ -1,10 +1,12 @@
 
 public class Chromebook extends Item{
 	private String os;
-
+	private boolean isAvailable;
+	
 	public Chromebook(String assetTag, String description, String os) {
 		super(assetTag, description);
 		this.os = os;
+		this.isAvailable = true;
 	}
 
 	public String getOs() {
@@ -17,6 +19,14 @@ public class Chromebook extends Item{
 		output += String.format("%s,%s,%d",this.getAssetTag(),this.getDescription(),this.getOs());
 		//yuting
 		return output;
+	}
+
+	/**
+	 * @return
+	 */
+	public boolean getIsAvailable() {
+		// TODO Auto-generated method stub
+		return isAvailable ; 
 	}
 }
 

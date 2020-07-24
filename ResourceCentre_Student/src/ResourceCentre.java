@@ -180,9 +180,10 @@ public class ResourceCentre {
 	}
 	
 	//================================= Option 3 Loan =================================
+	//done by yt and yp
+	
 	public static boolean doLoanCamcorder(ArrayList<Camcorder> camcorderList, String tag, String dueDate) {
 		boolean isLoaned = false;
-
 	    for (int i = 0; i < camcorderList.size(); i++) {
 	      if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())
 	          && camcorderList.get(i).getIsAvailable() == true) {
@@ -195,6 +196,7 @@ public class ResourceCentre {
 	      }
 	    }
 	    return isLoaned;
+
 	}
 	public static void loanCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.viewAllCamcorder(camcorderList);
@@ -209,24 +211,23 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-		//Yuping
+
 		boolean isLoaned = false;
 		for (int i = 0; i < chromebookList.size(); i++) {
 			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
-			        && chromebookList.get(i).getIsAvailable() == true) {
-			        
-			        chromebookList.get(i).setIsAvailable(false);
-			        chromebookList.get(i).setDueDate(dueDate);
-			        
-			        isLoaned = true;
-			        
-			      }
-			    }
-			   return isLoaned;
+					&& chromebookList.get(i).getIsAvailable() == true) {
+				
+				chromebookList.get(i).setIsAvailable(false);
+				chromebookList.get(i).setDueDate(dueDate);
+				
+				isLoaned = true;
+				
+			}
+		}return isLoaned;
 		
 	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// yuting
+		//yuting
 		ResourceCentre.viewAllChromebook(chromebookList);
 	    String tag = Helper.readString("Enter asset tag > ");
 	    String due = Helper.readString("Enter due date > ");
@@ -237,6 +238,7 @@ public class ResourceCentre {
 	    } else {
 	      System.out.println("Camcorder " + tag + " loaned out");
 	    }
+		
 		
 	}
 	
@@ -255,6 +257,7 @@ public class ResourceCentre {
 		}
 		return isReturned;
 		
+		
 	}
 	public static void returnCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.viewAllCamcorder(camcorderList);
@@ -271,24 +274,13 @@ public class ResourceCentre {
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag){
 		boolean isReturned = false;
 		// write your code here
+		
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
 		// write your code here
 	}
-
-    
-	public String concatenate_LuJing(String one, String two){
-        return "hello";
-}
-
-
-	public String concatenate(String one, String two){
-            return "hello";
-
-}
- 
 		
 	
 
