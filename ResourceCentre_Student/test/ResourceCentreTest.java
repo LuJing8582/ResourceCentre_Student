@@ -130,6 +130,9 @@ public class ResourceCentreTest {
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//boundary
+        //assertNotNull("Check if there is valid chromebook arraylist to add to", chromebookList);
+        //ResourceCentre.addChromebook(chromebookList, cb1);
 		
 	}
 	@Test
