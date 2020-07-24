@@ -12,11 +12,14 @@ public class Camcorder extends Item{
 	}
 	
 	public String toString(){
-		String output = "";
+		String output = ""; 
 		// Write your codes here
+		
 		return output;
 	}
 	// write what 
 	//write my name
+
+	
 }
 
