@@ -170,14 +170,12 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-<<<<<<< HEAD
-		Chromebook cb =null;
-=======
+
 		String tag = Helper.readString("Enter asset tag > ");
 		String description = Helper.readString("enter description > ");
 		String os = Helper.readString("Enter Operating System > ");
 		Chromebook cb = new Chromebook(tag,description,os);
->>>>>>> branch 'master' of https://github.com/LuJing8582/ResourceCentre_Student.git
+
 		return cb;
 		//edited by YuTing
 		
