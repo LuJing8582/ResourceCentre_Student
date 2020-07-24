@@ -181,6 +181,7 @@ public class ResourceCentre {
 	}
 	
 	//================================= Option 3 Loan =================================
+	
 	public static boolean doLoanCamcorder(ArrayList<Camcorder> camcorderList, String tag, String dueDate) {
 		
 		boolean isLoaned = false;
@@ -211,12 +212,30 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
+
 		// write your code here
 		
 		return true;
+
+		//YUPING AND YUTING
+		boolean isLoaned = false;
+		for (int i = 0; i < chromebookList.size(); i++) {
+			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
+					&& chromebookList.get(i).getIsAvailable() == true) {
+				
+				chromebookList.get(i).setIsAvailable(false);
+				chromebookList.get(i).setDueDate(dueDate);
+				
+				isLoaned = true;
+				
+			}
+		}return isLoaned ;
+		
+// >>>>>>> branch 'master' of https://github.com/LuJing8582/ResourceCentre_Student.git
 	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
+		
 		
 		
 	}
