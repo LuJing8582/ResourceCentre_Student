@@ -30,6 +30,7 @@ public class Item {
 
 	public boolean getIsAvailable(boolean b) {
 		return isAvailable;
+		
 	}
 
 	public void setIsAvailable(boolean isAvailable) {
