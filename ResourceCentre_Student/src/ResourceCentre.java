@@ -317,13 +317,13 @@ public class ResourceCentre {
 		
 
 	}
-<<<<<<< HEAD
+
 	
 	}
-=======
 
-}
->>>>>>> branch 'master' of https://github.com/LuJing8582/ResourceCentre_Student.git
+
+
+
 
 
 
