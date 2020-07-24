@@ -85,19 +85,10 @@ public class ResourceCentreTest {
 	}
 
 	@Test
-	public static boolean doLoanCamcorderTest(ArrayList<Camcorder> camcorderList, String tag, String dueDate) {
+	public  void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		boolean isLoaned = false;
-		for(int i=0; i<camcorderList.size();i++) {
-			if(tag.equals(camcorderList.get(i).getAssetTag() )&& camcorderList.get(i).getIsAvailable()==true)
-			{
-				camcorderList.get(i).setIsAvailable(false);
-				camcorderList.get(i).setDueDate(dueDate);
-				isLoaned=true;
-			}
-		}
-		return isLoaned;
+		
 		
 		
 		
