@@ -28,7 +28,7 @@ public class Item {
 		this.dueDate = dueDate;
 	}
 
-	public boolean getIsAvailable(boolean b) {
+	public boolean getIsAvailable() {
 		return isAvailable;
 		
 	}

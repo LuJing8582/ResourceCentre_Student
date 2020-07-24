@@ -18,5 +18,7 @@ public class Camcorder extends Item{
 	}
 	// write what 
 	//write my name
+
+	
 }
 

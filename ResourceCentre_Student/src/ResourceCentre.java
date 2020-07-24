@@ -121,7 +121,6 @@ public class ResourceCentre {
 		}
 		return avail;
 	}
-
 	//================================= Option 1 View =================================
 	public static String retrieveAllCamcorder(ArrayList<Camcorder> camcorderList) {
 		String output = "";
@@ -182,21 +181,20 @@ public class ResourceCentre {
 	
 	//================================= Option 3 Loan =================================
 	public static boolean doLoanCamcorder(ArrayList<Camcorder> camcorderList, String tag, String dueDate) {
-		
 		boolean isLoaned = false;
 
-		for (int i = 0; i < camcorderList.size(); i++) {
-			if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())
-					&& camcorderList.get(i).getIsAvailable(isLoaned) == true) {
-				
-				camcorderList.get(i).setIsAvailable(false);
-				camcorderList.get(i).setDueDate(dueDate);
-				
-				isLoaned = true;
-				
-			}
-		}
-		return isLoaned;
+	    for (int i = 0; i < camcorderList.size(); i++) {
+	      if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())
+	          && camcorderList.get(i).getIsAvailable() == true) {
+
+	        camcorderList.get(i).setIsAvailable(false);
+	        camcorderList.get(i).setDueDate(dueDate);
+
+	        isLoaned = true;
+
+	      }
+	    }
+	    return isLoaned;
 	}
 	public static void loanCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.viewAllCamcorder(camcorderList);
@@ -211,24 +209,34 @@ public class ResourceCentre {
 	}
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
-		//YUPING AND YUTING
+		//Yuping
 		boolean isLoaned = false;
 		for (int i = 0; i < chromebookList.size(); i++) {
 			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
-					&& chromebookList.get(i).getIsAvailable(isLoaned) == true) {
-				
-				chromebookList.get(i).setIsAvailable(false);
-				chromebookList.get(i).setDueDate(dueDate);
-				
-				isLoaned = true;
-				
-			}
-		}return isLoaned;
+			        && chromebookList.get(i).getIsAvailable() == true) {
+			        
+			        chromebookList.get(i).setIsAvailable(false);
+			        chromebookList.get(i).setDueDate(dueDate);
+			        
+			        isLoaned = true;
+			        
+			      }
+			    }
+			   return isLoaned;
 		
 	}
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
-		
+		// yuting
+		ResourceCentre.viewAllChromebook(chromebookList);
+	    String tag = Helper.readString("Enter asset tag > ");
+	    String due = Helper.readString("Enter due date > ");
+	   
+	    Boolean isLoaned = doLoanChromebook(chromebookList, tag, due);
+	    if (isLoaned == false) {
+	      System.out.println("Invalid asset tag");
+	    } else {
+	      System.out.println("Camcorder " + tag + " loaned out");
+	    }
 		
 	}
 	
@@ -269,17 +277,16 @@ public class ResourceCentre {
 		// write your code here
 		// write your code here
 	}
-<<<<<<< HEAD
+
     
 	public String concatenate_LuJing(String one, String two){
         return "hello";
 }
 
-=======
 
 	public String concatenate(String one, String two){
             return "hello";
->>>>>>> branch 'master' of https://github.com/LuJing8582/ResourceCentre_Student.git
+
 }
  
 		
