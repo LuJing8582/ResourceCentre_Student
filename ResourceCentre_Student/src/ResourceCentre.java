@@ -257,12 +257,15 @@ public class ResourceCentre {
 		// write your code here
 		// write your code here
 	}
-	
-	public static void yuting(String test)
-	{
+
+	public String concatenate(String one, String two){
+            return "hello";
+}
+ 
 		
-	}
 	
+
+
 }
 
 
