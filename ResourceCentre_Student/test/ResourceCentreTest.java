@@ -131,14 +131,41 @@ public class ResourceCentreTest {
 		//fail("Not yet implemented");
 		// write your code here
 		//boundary
-        //assertNotNull("Check if there is valid chromebook arraylist to add to", chromebookList);
-        //ResourceCentre.addChromebook(chromebookList, cb1);
+        assertNotNull("Check if there is valid Camcorder arraylist to add to", camcorderList);
+        ResourceCentre.addCamcorder(camcorderList, cc1);
+        //error
+        Boolean isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0011");
+        assertFalse("Test if available Camcorder CC0011 is returned, -falsed", isReturned);
+        //normal
+        ResourceCentre.addCamcorder(camcorderList, cc2);
+        cc2.setIsAvailable(false);
+        isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0012");
+        assertTrue("Test if loaned out CB002 is returned - true", isReturned);
+        //error
+        isReturned = ResourceCentre.doReturnCamcorder(camcorderList, "CC0013");
+        assertTrue("Test if non-existing CC0013 is returned - false", isReturned);
+        
+		
 		
 	}
 	@Test
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//boundary
+        assertNotNull("Check if there is valid Chromebook arraylist to add to", chromebookList);
+        ResourceCentre.addChromebook(chromebookList, cb1);
+        //error
+        Boolean isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
+        assertFalse("Test if available Chromebook CB0011 is returned, -falsed", isReturned);
+        //normal
+        ResourceCentre.addChromebook(chromebookList, cb2);
+        cb2.setIsAvailable(false);
+        isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0012");
+        assertTrue("Test if loaned out CB002 is returned - true", isReturned);
+        //error
+        isReturned = ResourceCentre.doReturnChromebook(chromebookList, "CB0013");
+        assertTrue("Test if non-existing CB0013 is returned - false", isReturned);
 	}
 	
 	@After
