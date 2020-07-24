@@ -258,9 +258,12 @@ public class ResourceCentre {
 		// write your code here
 	}
 	
-	public String concatenate_YuTing(String one, String two){
-        return "hello!!";
+	public static void yuting(String test)
+	{
+		
+	}
+	
 }
 
 
-}
+
